@@ -1,8 +1,39 @@
 ﻿<Window x:Class="Fidson.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="MainWindow" Height="350" Width="600">
+        Title="MainWindow" SizeToContent="WidthAndHeight" mc:Ignorable="d" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" d:DesignHeight="245" d:DesignWidth="358" WindowStartupLocation="CenterScreen">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.38*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="0.1*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="3.0*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+                
+            <Grid Grid.Row="1" Grid.Column="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="242*" />
+                    <ColumnDefinition Width="10*" />
+                </Grid.ColumnDefinitions>
+              
+                    <Frame Source="home.xaml"  NavigationUIVisibility="Hidden" Margin="15,10,2,10" />
+            </Grid>
+            <Grid Grid.Row="1" Grid.Column="1">
+                <Frame Source="advert.xaml" NavigationUIVisibility="Hidden" Margin="6,6,14,-15" />
+            </Grid>
+                
+        </Grid>
+        
+        <Grid Grid.Row="0">
+            <StackPanel Orientation="Vertical" Grid.Row="0">
+                <Canvas Background="#FF001941" Margin="0,0,0,1" Height="40"/>
+                <Line Stroke="#FF001941" StrokeThickness="1.2" X2="400"  Stretch="UniformToFill" />
+            </StackPanel>
+        </Grid>
         
     </Grid>
 </Window>
