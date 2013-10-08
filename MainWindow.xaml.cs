@@ -11,6 +11,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Fidson.Controllers;
 
 namespace Fidson
 {
@@ -22,6 +23,17 @@ namespace Fidson
         public MainWindow()
         {
             InitializeComponent();
+
+            Product p = new Product()
+                {
+                    Description = "SDSDSD",
+                   
+                    ImageUrl = "SSDSD",
+                     Name = "SCSS"
+                };
+            var handler = new ProductController();
+            handler.AddProduct(p);
+            
         }
     }
 }
