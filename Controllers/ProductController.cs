@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Windows;
 
 namespace Fidson.Controllers
 {
@@ -25,7 +26,7 @@ namespace Fidson.Controllers
             }
             catch (Exception exception)
             {
-              
+                MessageBox.Show(exception.Message);
             }
         
         }
@@ -33,7 +34,7 @@ namespace Fidson.Controllers
         public IEnumerable<Product> GetAllProducts()
         {
             var dbContext = new DatabaseContext();
-            return dbContext.Products;
+            return dbContext.Products.ToList();
         }
     }
 }
